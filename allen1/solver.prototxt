@@ -12,7 +12,8 @@ weight_decay: 0.0005
 snapshot: 200
 snapshot_prefix: "/home/allen/mycaffe/caffe/examples/allen1/allen_caffenet_train"
 solver_mode: CPU
-snapshot_format: HDF5
+#snapshot_format: HDF5
 
 
+# 400个训练数据。
 # 100个测试数据，batch_size为50，因此test_iter设置为2，就能全cover了。在训练过程中，调整学习率，逐步变小。

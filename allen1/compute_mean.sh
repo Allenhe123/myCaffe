@@ -9,6 +9,11 @@ set -e
 
 MY=/home/allen/mycaffe/caffe/examples/allen1
 
+if [ -f "$MY/mean.binaryproto" ];then
+    echo "rm -f $MY/mean.binaryproto"
+    rm -f $MY/mean.binaryproto
+fi
+
 echo "compute mean value for train data"
 
 sudo ../../build/tools/compute_image_mean $MY/img_train_lmdb $MY/mean.binaryproto

@@ -3,7 +3,11 @@ https://blog.csdn.net/u013832707/article/details/52943935
 1. copy the two directories test and train to here.
 2. run create_filelist.py to generate test.txt and train.txt.
 3. run create_lmdb.sh to generate lmdb format data: img_test_lmdb and img_train_lmdb.
+4. run compute_mean.sh to generate mean.binaryproto.
 4. run create_model.sh to copy solver.prototxt and train_val.prototxt to here.
 5. change *.prototxt according to ourselves's requirement.
 6. run start_train.sh to train.
 7. run start_test.sh to test.
+
+
+CaffeNet就是AlexNet用caffe实现的网络。
