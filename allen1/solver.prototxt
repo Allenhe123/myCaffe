@@ -1,12 +1,12 @@
 net: "/home/allen/mycaffe/caffe/examples/allen1/train_val.prototxt"
-test_iter: 2
+test_iter: 100
 test_interval: 50
 base_lr: 0.01
 lr_policy: "step"
 gamma: 0.1
-stepsize: 100
+stepsize: 10   # 每迭代stepsize次，更改一次学习率
 display: 20
-max_iter: 500
+max_iter: 100
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 200

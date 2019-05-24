@@ -23,8 +23,8 @@ layer {
 #  }
   data_param {
     source: "/home/allen/mycaffe/caffe/examples/allen1/img_train_lmdb"
-    batch_size: 256
-#   batch_size: 50      # TRAIN batch size 太大会导致内存占用太多，导致malloc()失败
+#    batch_size: 256
+    batch_size: 100      # TRAIN batch size 太大会导致内存占用太多，导致malloc()失败
     backend: LMDB
   }
 }
@@ -51,7 +51,7 @@ layer {
 #  }
   data_param {
     source: "/home/allen/mycaffe/caffe/examples/allen1/img_test_lmdb"
-    batch_size: 50  # TEST batch size
+    batch_size: 1  # TEST batch size
     backend: LMDB
   }
 }
@@ -372,7 +372,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 5  # 分成5类，所以修改成5
+    num_output: 5  # 这里分5类，所以修改成5（imagenet分类是1000类） imagelist中，图像分类的标签label一定要从0开始
     weight_filler {
       type: "gaussian"
       std: 0.01
