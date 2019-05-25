@@ -24,7 +24,7 @@ layer {
   data_param {
     source: "/home/allen/mycaffe/caffe/examples/allen1/img_train_lmdb"
 #    batch_size: 256
-    batch_size: 100      # TRAIN batch size 太大会导致内存占用太多，导致malloc()失败
+    batch_size: 50      # TRAIN batch size 太大会导致内存占用太多，导致malloc()失败
     backend: LMDB
   }
 }
@@ -51,7 +51,7 @@ layer {
 #  }
   data_param {
     source: "/home/allen/mycaffe/caffe/examples/allen1/img_test_lmdb"
-    batch_size: 1  # TEST batch size
+    batch_size: 50  # TEST batch size
     backend: LMDB
   }
 }

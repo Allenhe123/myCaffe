@@ -11,3 +11,11 @@ https://blog.csdn.net/u013832707/article/details/52943935
 
 
 CaffeNet就是AlexNet用caffe实现的网络。
+
+用训练好的模型对单张图片进行测试分类：
+./build/examples/cpp_classification/classification.bin \
+网络结构文件：xx/xx/deploy.prototxt                      \
+训练的模型文件：xx/xx/xx.caffemodel                      \
+训练的图像的均值文件：xx/xx/xx.binaryproto                \
+类别名称标签文件：xx/xx/synset_words.txt                 \
+待测试图像：xx/xx/xx.jpg  

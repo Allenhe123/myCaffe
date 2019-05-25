@@ -1,17 +1,18 @@
 net: "/home/allen/mycaffe/caffe/examples/allen1/train_val.prototxt"
-test_iter: 100
-test_interval: 50
-base_lr: 0.01
+test_iter: 2
+test_interval: 100
+base_lr: 0.001
 lr_policy: "step"
 gamma: 0.1
-stepsize: 10   # 每迭代stepsize次，更改一次学习率
+#power:0.75
+stepsize: 100   # 每迭代stepsize次，更改一次学习率
 display: 20
-max_iter: 100
+max_iter: 1000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 200
 snapshot_prefix: "/home/allen/mycaffe/caffe/examples/allen1/allen_caffenet_train"
-solver_mode: CPU
+solver_mode: GPU
 #snapshot_format: HDF5
 
 
